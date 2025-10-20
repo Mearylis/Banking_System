@@ -35,22 +35,22 @@ public class InteractiveMenu {
     }
 
     private void displayWelcome() {
-        System.out.println("╔════════════════════════════════════════════════════╗");
-        System.out.println("║                🏦 БАНКОВСКАЯ СИСТЕМА              ║");
-        System.out.println("║           Digital Banking & Investment            ║");
-        System.out.println("╚════════════════════════════════════════════════════╝");
+        System.out.println("========================================================");
+        System.out.println("|                BANKING SYSTEM                       |");
+        System.out.println("|           Digital Banking & Investment              |");
+        System.out.println("========================================================");
         System.out.println();
     }
 
     private void showMainMenu() {
-        System.out.println("┌─────────────────── ГЛАВНОЕ МЕНЮ ───────────────────┐");
-        System.out.println("│  1. 🔐 Войти в систему                            │");
-        System.out.println("│  2. 👤 Создать нового клиента                     │");
-        System.out.println("│  3. 📊 Запустить демонстрацию системы             │");
-        System.out.println("│  4. ℹ️  О системе                                 │");
-        System.out.println("│  5. ❌ Выход                                      │");
-        System.out.println("└────────────────────────────────────────────────────┘");
-        System.out.print("🎯 Выберите опцию: ");
+        System.out.println("------------------- MAIN MENU ----------------------");
+        System.out.println("|  1. Sign in to the system                        |");
+        System.out.println("|  2. Create new customer                          |");
+        System.out.println("|  3. Run system demonstration                     |");
+        System.out.println("|  4. About the system                             |");
+        System.out.println("|  5. Exit                                         |");
+        System.out.println("----------------------------------------------------");
+        System.out.print("Select option: ");
 
         int choice = readIntInput();
 
@@ -60,27 +60,27 @@ public class InteractiveMenu {
             case 3 -> runDemo();
             case 4 -> showSystemInfo();
             case 5 -> exitSystem();
-            default -> showError("Неверный выбор. Попробуйте снова.");
+            default -> showError("Invalid choice. Please try again.");
         }
     }
 
     private void showCustomerMenu() {
-        System.out.println("┌───────────────── ЛИЧНЫЙ КАБИНЕТ ──────────────────┐");
-        System.out.println("│ 👤 Клиент: " + padRight(currentCustomerId, 35) + "│");
-        System.out.println("├────────────────────────────────────────────────────┤");
-        System.out.println("│  1. 📝 Открыть новый счет                         │");
-        System.out.println("│  2. 💰 Пополнить счет                             │");
-        System.out.println("│  3. 💸 Снять средства                             │");
-        System.out.println("│  4. 🔄 Перевод между счетами                      │");
-        System.out.println("│  5. 📈 Инвестиционные операции                    │");
-        System.out.println("│  6. 📋 Мои счета                                  │");
-        System.out.println("│  7. 📊 Выписка по счету                           │");
-        System.out.println("│  8. 📧 Уведомления (" + getUnreadNotificationsCount() + ")                          │");
-        System.out.println("│  9. 📄 Портфельный отчет                          │");
-        System.out.println("│ 10. ⚙️  Дополнительные операции                   │");
-        System.out.println("│ 11. ↩️  Выйти из аккаунта                         │");
-        System.out.println("└────────────────────────────────────────────────────┘");
-        System.out.print("🎯 Выберите опцию: ");
+        System.out.println("----------------- PERSONAL ACCOUNT -----------------");
+        System.out.println("| Customer: " + padRight(currentCustomerId, 35) + "|");
+        System.out.println("----------------------------------------------------");
+        System.out.println("|  1. Open new account                             |");
+        System.out.println("|  2. Deposit funds                                |");
+        System.out.println("|  3. Withdraw funds                               |");
+        System.out.println("|  4. Transfer between accounts                    |");
+        System.out.println("|  5. Investment operations                        |");
+        System.out.println("|  6. My accounts                                  |");
+        System.out.println("|  7. Account statement                            |");
+        System.out.println("|  8. Notifications (" + getUnreadNotificationsCount() + ")                          |");
+        System.out.println("|  9. Portfolio report                             |");
+        System.out.println("| 10. Additional operations                        |");
+        System.out.println("| 11. Logout                                       |");
+        System.out.println("----------------------------------------------------");
+        System.out.print("Select option: ");
 
         int choice = readIntInput();
 
@@ -96,21 +96,21 @@ public class InteractiveMenu {
             case 9 -> viewPortfolio();
             case 10 -> showAdvancedOperations();
             case 11 -> logout();
-            default -> showError("Неверный выбор. Попробуйте снова.");
+            default -> showError("Invalid choice. Please try again.");
         }
     }
 
     private void showAdvancedOperations() {
-        System.out.println("┌───────────── ДОПОЛНИТЕЛЬНЫЕ ОПЕРАЦИИ ─────────────┐");
-        System.out.println("│  1. 🛡️  Создать безопасный инвестиционный счет    │");
-        System.out.println("│  2. 💳 Проверить овердрафт                        │");
-        System.out.println("│  3. 💱 Мультивалютные операции                    │");
-        System.out.println("│  4. ⭐ Привилегированное обслуживание             │");
-        System.out.println("│  5. 🎁 Бонусные баллы                             │");
-        System.out.println("│  6. 🗑️  Закрыть счет                              │");
-        System.out.println("│  7. ↩️  Назад                                     │");
-        System.out.println("└────────────────────────────────────────────────────┘");
-        System.out.print("🎯 Выберите опцию: ");
+        System.out.println("------------- ADDITIONAL OPERATIONS ----------------");
+        System.out.println("|  1. Create secure investment account             |");
+        System.out.println("|  2. Check overdraft                              |");
+        System.out.println("|  3. Multi-currency operations                    |");
+        System.out.println("|  4. Priority banking                             |");
+        System.out.println("|  5. Reward points                                |");
+        System.out.println("|  6. Close account                                |");
+        System.out.println("|  7. Back                                         |");
+        System.out.println("----------------------------------------------------");
+        System.out.print("Select option: ");
 
         int choice = readIntInput();
 
@@ -122,51 +122,51 @@ public class InteractiveMenu {
             case 5 -> rewardPoints();
             case 6 -> closeAccount();
             case 7 -> { return; }
-            default -> showError("Неверный выбор.");
+            default -> showError("Invalid choice.");
         }
     }
 
     private void loginCustomer() {
         System.out.println();
-        System.out.print("🔐 Введите ID клиента: ");
+        System.out.print("Enter customer ID: ");
         String customerId = scanner.nextLine().trim();
 
         if (customerId.isEmpty()) {
-            showError("ID клиента не может быть пустым.");
+            showError("Customer ID cannot be empty.");
             return;
         }
 
-        // Проверяем, есть ли у клиента счета
+        // Check if customer has accounts
         try {
             List<Account> accounts = bankingFacade.getCustomerAccountsByType(customerId, "");
             if (accounts.isEmpty()) {
-                showWarning("Клиент с ID '" + customerId + "' не найден или не имеет счетов.");
-                System.out.print("Хотите создать нового клиента? (y/n): ");
+                showWarning("Customer with ID '" + customerId + "' not found or has no accounts.");
+                System.out.print("Do you want to create a new customer? (y/n): ");
                 String createNew = scanner.nextLine().trim();
-                if ("y".equalsIgnoreCase(createNew) || "д".equalsIgnoreCase(createNew)) {
+                if ("y".equalsIgnoreCase(createNew)) {
                     createNewCustomerWithId(customerId);
                     return;
                 } else {
-                    showInfo("Вход отменен.");
+                    showInfo("Login cancelled.");
                     return;
                 }
             }
 
             currentCustomerId = customerId;
-            showSuccess("Успешный вход! Добро пожаловать, " + customerId);
+            showSuccess("Login successful! Welcome, " + customerId);
 
         } catch (Exception e) {
-            showError("Ошибка при входе: " + e.getMessage());
+            showError("Login error: " + e.getMessage());
         }
     }
 
     private void createNewCustomer() {
         System.out.println();
-        System.out.print("👤 Введите ID нового клиента: ");
+        System.out.print("Enter new customer ID: ");
         String customerId = scanner.nextLine().trim();
 
         if (customerId.isEmpty()) {
-            showError("ID клиента не может быть пустым.");
+            showError("Customer ID cannot be empty.");
             return;
         }
 
@@ -174,56 +174,56 @@ public class InteractiveMenu {
     }
 
     private void createNewCustomerWithId(String customerId) {
-        // Проверяем, не существует ли уже клиент
+        // Check if customer already exists
         try {
             List<Account> existingAccounts = bankingFacade.getCustomerAccountsByType(customerId, "");
             if (!existingAccounts.isEmpty()) {
-                showWarning("Клиент с ID '" + customerId + "' уже существует!");
-                System.out.print("Хотите войти под этим ID? (y/n): ");
+                showWarning("Customer with ID '" + customerId + "' already exists!");
+                System.out.print("Do you want to login with this ID? (y/n): ");
                 String login = scanner.nextLine().trim();
-                if ("y".equalsIgnoreCase(login) || "д".equalsIgnoreCase(login)) {
+                if ("y".equalsIgnoreCase(login)) {
                     currentCustomerId = customerId;
-                    showSuccess("Успешный вход! Добро пожаловать, " + customerId);
+                    showSuccess("Login successful! Welcome, " + customerId);
                 }
                 return;
             }
         } catch (Exception e) {
-            // Клиент не существует - это нормально
+            // Customer doesn't exist - this is normal
         }
 
-        showSuccess("Клиент " + customerId + " создан!");
-        System.out.println("Теперь вы можете войти под этим ID или сразу открыть счет.");
+        showSuccess("Customer " + customerId + " created!");
+        System.out.println("You can now login with this ID or open an account immediately.");
 
-        System.out.print("Хотите открыть счет сейчас? (y/n): ");
+        System.out.print("Do you want to open an account now? (y/n): ");
         String openAccount = scanner.nextLine().trim();
-        if ("y".equalsIgnoreCase(openAccount) || "д".equalsIgnoreCase(openAccount)) {
+        if ("y".equalsIgnoreCase(openAccount)) {
             currentCustomerId = customerId;
             createAccount();
         } else {
-            showInfo("Вы можете войти позже под ID: " + customerId);
+            showInfo("You can login later with ID: " + customerId);
         }
     }
 
     private void createAccount() {
         if (currentCustomerId == null) {
-            showError("Сначала войдите в систему.");
+            showError("Please login first.");
             return;
         }
 
         System.out.println();
-        System.out.println("┌───────────── ОТКРЫТИЕ НОВОГО СЧЕТА ──────────────┐");
-        System.out.println("│  1. 💰 Сберегательный счет                       │");
-        System.out.println("│     • Бонусные баллы                             │");
-        System.out.println("│     • Страхование от $10,000                     │");
-        System.out.println("│  2. 📈 Инвестиционный счет                       │");
-        System.out.println("│     • Налоговая оптимизация 15%                  │");
-        System.out.println("│     • Привилегии от $5,000                       │");
-        System.out.println("│  3. 💳 Расчетный счет                            │");
-        System.out.println("│     • Овердрафт до $2,000                        │");
-        System.out.println("│     • Мультивалютность от $5,000                 │");
-        System.out.println("│  4. ↩️  Назад                                    │");
-        System.out.println("└────────────────────────────────────────────────────┘");
-        System.out.print("🎯 Выберите тип счета: ");
+        System.out.println("------------- OPEN NEW ACCOUNT ---------------------");
+        System.out.println("|  1. Savings account                              |");
+        System.out.println("|     * Reward points                              |");
+        System.out.println("|     * Insurance from $10,000                     |");
+        System.out.println("|  2. Investment account                           |");
+        System.out.println("|     * Tax optimization 15%                       |");
+        System.out.println("|     * Privileges from $5,000                     |");
+        System.out.println("|  3. Checking account                             |");
+        System.out.println("|     * Overdraft up to $2,000                     |");
+        System.out.println("|     * Multi-currency from $5,000                 |");
+        System.out.println("|  4. Back                                         |");
+        System.out.println("----------------------------------------------------");
+        System.out.print("Select account type: ");
 
         int typeChoice = readIntInput();
         if (typeChoice == 4) return;
@@ -233,34 +233,34 @@ public class InteractiveMenu {
             case 2 -> "investment";
             case 3 -> "checking";
             default -> {
-                showError("Неверный тип счета.");
+                showError("Invalid account type.");
                 yield null;
             }
         };
 
         if (accountType == null) return;
 
-        System.out.print("💵 Введите начальный депозит: $");
+        System.out.print("Enter initial deposit: $");
         BigDecimal deposit = readBigDecimalInput();
 
         if (deposit.compareTo(BigDecimal.ZERO) < 0) {
-            showError("Сумма не может быть отрицательной.");
+            showError("Amount cannot be negative.");
             return;
         }
 
         if (deposit.compareTo(BigDecimal.ZERO) == 0) {
-            showWarning("Вы открываете счет с нулевым балансом.");
+            showWarning("You are opening an account with zero balance.");
         }
 
         try {
             Account account = bankingFacade.openAccountWithBenefits(currentCustomerId, accountType, deposit);
-            showSuccess("Счет успешно создан!");
-            System.out.println("📋 Номер счета: " + account.getAccountNumber());
-            System.out.println("📝 Тип: " + account.getAccountType());
-            System.out.println("💎 Особенности: " + account.getDescription());
-            System.out.println("💵 Начальный баланс: $" + account.getBalance());
+            showSuccess("Account successfully created!");
+            System.out.println("Account number: " + account.getAccountNumber());
+            System.out.println("Type: " + account.getAccountType());
+            System.out.println("Features: " + account.getDescription());
+            System.out.println("Initial balance: $" + account.getBalance());
         } catch (Exception e) {
-            showError("Ошибка при создании счета: " + e.getMessage());
+            showError("Error creating account: " + e.getMessage());
         }
 
         pressAnyKeyToContinue();
@@ -268,48 +268,48 @@ public class InteractiveMenu {
 
     private void depositMoney() {
         if (currentCustomerId == null) {
-            showError("Сначала войдите в систему.");
+            showError("Please login first.");
             return;
         }
 
         System.out.println();
-        System.out.print("📥 Введите номер счета для пополнения: ");
+        System.out.print("Enter account number for deposit: ");
         String accountNumber = scanner.nextLine().trim();
 
         if (accountNumber.isEmpty()) {
-            showError("Номер счета не может быть пустым.");
+            showError("Account number cannot be empty.");
             return;
         }
 
-        // Проверяем, существует ли счет и принадлежит ли клиенту
+        // Check if account exists and belongs to customer
         if (!isAccountAccessible(accountNumber)) {
-            showError("Счет не найден или у вас нет к нему доступа.");
+            showError("Account not found or you don't have access.");
             return;
         }
 
-        System.out.print("💵 Введите сумму для пополнения: $");
+        System.out.print("Enter deposit amount: $");
         BigDecimal amount = readBigDecimalInput();
 
         if (amount.compareTo(BigDecimal.ZERO) <= 0) {
-            showError("Сумма должна быть положительной.");
+            showError("Amount must be positive.");
             return;
         }
 
         if (amount.compareTo(BigDecimal.valueOf(100000)) > 0) {
-            showWarning("Внимание: вы вносите очень крупную сумму (>$100,000).");
-            System.out.print("Подтвердите операцию (y/n): ");
+            showWarning("Warning: you are depositing a very large amount (>$100,000).");
+            System.out.print("Confirm operation (y/n): ");
             String confirm = scanner.nextLine().trim();
-            if (!"y".equalsIgnoreCase(confirm) && !"д".equalsIgnoreCase(confirm)) {
-                showInfo("Операция отменена.");
+            if (!"y".equalsIgnoreCase(confirm)) {
+                showInfo("Operation cancelled.");
                 return;
             }
         }
 
         try {
-            bankingFacade.deposit(accountNumber, amount, "Депозит через систему");
-            showSuccess("Успешно пополнено $" + amount);
+            bankingFacade.deposit(accountNumber, amount, "Deposit via system");
+            showSuccess("Successfully deposited $" + amount);
         } catch (Exception e) {
-            showError("Ошибка при пополнении: " + e.getMessage());
+            showError("Deposit error: " + e.getMessage());
         }
 
         pressAnyKeyToContinue();
@@ -317,62 +317,62 @@ public class InteractiveMenu {
 
     private void withdrawMoney() {
         if (currentCustomerId == null) {
-            showError("Сначала войдите в систему.");
+            showError("Please login first.");
             return;
         }
 
         System.out.println();
-        System.out.print("📤 Введите номер счета для снятия: ");
+        System.out.print("Enter account number for withdrawal: ");
         String accountNumber = scanner.nextLine().trim();
 
         if (accountNumber.isEmpty()) {
-            showError("Номер счета не может быть пустым.");
+            showError("Account number cannot be empty.");
             return;
         }
 
         if (!isAccountAccessible(accountNumber)) {
-            showError("Счет не найден или у вас нет к нему доступа.");
+            showError("Account not found or you don't have access.");
             return;
         }
 
-        System.out.print("💵 Введите сумму для снятия: $");
+        System.out.print("Enter withdrawal amount: $");
         BigDecimal amount = readBigDecimalInput();
 
         if (amount.compareTo(BigDecimal.ZERO) <= 0) {
-            showError("Сумма должна быть положительной.");
+            showError("Amount must be positive.");
             return;
         }
 
-        // Проверяем баланс счета
+        // Check account balance
         try {
             Account account = getAccountByNumber(accountNumber);
             if (account != null) {
                 if (account.getBalance().compareTo(amount) < 0) {
-                    showError("Недостаточно средств на счете.");
-                    System.out.println("💳 Доступно: $" + account.getBalance());
+                    showError("Insufficient funds in account.");
+                    System.out.println("Available: $" + account.getBalance());
                     return;
                 }
 
                 if (amount.compareTo(BigDecimal.valueOf(5000)) > 0) {
-                    showWarning("Внимание: крупное снятие (>$5,000).");
-                    System.out.print("Подтвердите операцию (y/n): ");
+                    showWarning("Warning: large withdrawal (>$5,000).");
+                    System.out.print("Confirm operation (y/n): ");
                     String confirm = scanner.nextLine().trim();
-                    if (!"y".equalsIgnoreCase(confirm) && !"д".equalsIgnoreCase(confirm)) {
-                        showInfo("Операция отменена.");
+                    if (!"y".equalsIgnoreCase(confirm)) {
+                        showInfo("Operation cancelled.");
                         return;
                     }
                 }
             }
         } catch (Exception e) {
-            showError("Ошибка при проверке счета: " + e.getMessage());
+            showError("Account check error: " + e.getMessage());
             return;
         }
 
         try {
-            bankingFacade.withdraw(accountNumber, amount, "Снятие через систему");
-            showSuccess("Успешно снято $" + amount);
+            bankingFacade.withdraw(accountNumber, amount, "Withdrawal via system");
+            showSuccess("Successfully withdrew $" + amount);
         } catch (Exception e) {
-            showError("Ошибка при снятии: " + e.getMessage());
+            showError("Withdrawal error: " + e.getMessage());
         }
 
         pressAnyKeyToContinue();
@@ -380,70 +380,70 @@ public class InteractiveMenu {
 
     private void transferMoney() {
         if (currentCustomerId == null) {
-            showError("Сначала войдите в систему.");
+            showError("Please login first.");
             return;
         }
 
         System.out.println();
-        System.out.print("➡️  Введите номер счета отправителя: ");
+        System.out.print("Enter sender account number: ");
         String fromAccount = scanner.nextLine().trim();
 
         if (fromAccount.isEmpty()) {
-            showError("Номер счета отправителя не может быть пустым.");
+            showError("Sender account number cannot be empty.");
             return;
         }
 
         if (!isAccountAccessible(fromAccount)) {
-            showError("Счет отправителя не найден или у вас нет к нему доступа.");
+            showError("Sender account not found or you don't have access.");
             return;
         }
 
-        System.out.print("⬅️  Введите номер счета получателя: ");
+        System.out.print("Enter recipient account number: ");
         String toAccount = scanner.nextLine().trim();
 
         if (toAccount.isEmpty()) {
-            showError("Номер счета получателя не может быть пустым.");
+            showError("Recipient account number cannot be empty.");
             return;
         }
 
         if (fromAccount.equals(toAccount)) {
-            showError("Нельзя переводить средства на тот же счет.");
+            showError("Cannot transfer funds to the same account.");
             return;
         }
 
-        System.out.print("💵 Введите сумму перевода: $");
+        System.out.print("Enter transfer amount: $");
         BigDecimal amount = readBigDecimalInput();
 
         if (amount.compareTo(BigDecimal.ZERO) <= 0) {
-            showError("Сумма должна быть положительной.");
+            showError("Amount must be positive.");
             return;
         }
 
-        // Проверяем баланс счета отправителя
+        // Check sender account balance
         try {
             Account account = getAccountByNumber(fromAccount);
             if (account != null && account.getBalance().compareTo(amount) < 0) {
-                showError("Недостаточно средств на счете отправителя.");
-                System.out.println("💳 Доступно: $" + account.getBalance());
+                showError("Insufficient funds in sender account.");
+                System.out.println("Available: $" + account.getBalance());
                 return;
             }
         } catch (Exception e) {
-            showError("Ошибка при проверке счета: " + e.getMessage());
+            showError("Account check error: " + e.getMessage());
             return;
         }
 
-        System.out.print("📝 Введите назначение платежа: ");
+        System.out.print("Enter payment description: ");
         String description = scanner.nextLine().trim();
 
         if (description.isEmpty()) {
-            description = "Перевод между счетами";
+            description = "Transfer between accounts";
         }
 
         try {
             bankingFacade.transferBetweenAccounts(fromAccount, toAccount, amount, description);
-            showSuccess("Успешно переведено $" + amount);
+            showSuccess("Successfully transferred $" + amount);
         } catch (Exception e) {
-            showError("Ошибка при переводе: " + e.getMessage());
+            showError("Transfer error: " + e.getMessage());
         }
 
         pressAnyKeyToContinue();
@@ -451,17 +451,17 @@ public class InteractiveMenu {
 
     private void investmentOperations() {
         if (currentCustomerId == null) {
-            showError("Сначала войдите в систему.");
+            showError("Please login first.");
             return;
         }
 
         System.out.println();
-        System.out.println("┌───────────── ИНВЕСТИЦИОННЫЕ ОПЕРАЦИИ ─────────────┐");
-        System.out.println("│  1. 📈 Начислить инвестиционный доход             │");
-        System.out.println("│  2. 🏦 Создать инвестиционный счет                │");
-        System.out.println("│  3. ↩️  Назад                                     │");
-        System.out.println("└────────────────────────────────────────────────────┘");
-        System.out.print("🎯 Выберите операцию: ");
+        System.out.println("------------- INVESTMENT OPERATIONS ----------------");
+        System.out.println("|  1. Apply investment returns                     |");
+        System.out.println("|  2. Create investment account                    |");
+        System.out.println("|  3. Back                                         |");
+        System.out.println("----------------------------------------------------");
+        System.out.print("Select operation: ");
 
         int choice = readIntInput();
 
@@ -469,50 +469,50 @@ public class InteractiveMenu {
             case 1 -> applyInvestmentReturns();
             case 2 -> createInvestmentAccount();
             case 3 -> { return; }
-            default -> showError("Неверный выбор.");
+            default -> showError("Invalid choice.");
         }
     }
 
     private void applyInvestmentReturns() {
         System.out.println();
-        System.out.print("📈 Введите номер инвестиционного счета: ");
+        System.out.print("Enter investment account number: ");
         String accountNumber = scanner.nextLine().trim();
 
         if (accountNumber.isEmpty()) {
-            showError("Номер счета не может быть пустым.");
+            showError("Account number cannot be empty.");
             return;
         }
 
         if (!isAccountAccessible(accountNumber)) {
-            showError("Счет не найден или у вас нет к нему доступа.");
+            showError("Account not found or you don't have access.");
             return;
         }
 
-        // Проверяем, что счет действительно инвестиционный
+        // Check if account is actually investment type
         try {
             Account account = getAccountByNumber(accountNumber);
             if (account != null && !account.getAccountType().contains("Investment")) {
-                showError("Этот счет не является инвестиционным.");
+                showError("This account is not an investment account.");
                 return;
             }
         } catch (Exception e) {
-            showError("Ошибка при проверке счета: " + e.getMessage());
+            showError("Account check error: " + e.getMessage());
             return;
         }
 
-        System.out.print("💰 Введите сумму дохода: $");
+        System.out.print("Enter returns amount: $");
         BigDecimal returns = readBigDecimalInput();
 
         if (returns.compareTo(BigDecimal.ZERO) <= 0) {
-            showError("Сумма должна быть положительной.");
+            showError("Amount must be positive.");
             return;
         }
 
         try {
             bankingFacade.applyInvestmentReturns(accountNumber, returns);
-            showSuccess("Инвестиционный доход начислен");
+            showSuccess("Investment returns applied");
         } catch (Exception e) {
-            showError("Ошибка: " + e.getMessage());
+            showError("Error: " + e.getMessage());
         }
 
         pressAnyKeyToContinue();
@@ -520,23 +520,23 @@ public class InteractiveMenu {
 
     private void createInvestmentAccount() {
         System.out.println();
-        System.out.print("💵 Введите сумму начальных инвестиций: $");
+        System.out.print("Enter initial investment amount: $");
         BigDecimal investment = readBigDecimalInput();
 
         if (investment.compareTo(BigDecimal.ZERO) <= 0) {
-            showError("Сумма должна быть положительной.");
+            showError("Amount must be positive.");
             return;
         }
 
         if (investment.compareTo(BigDecimal.valueOf(1000)) < 0) {
-            showWarning("Рекомендуемый минимальный взнос для инвестиционного счета: $1,000");
+            showWarning("Recommended minimum investment: $1,000");
         }
 
         try {
             bankingFacade.openAccountWithBenefits(currentCustomerId, "investment", investment);
-            showSuccess("Инвестиционный счет создан");
+            showSuccess("Investment account created");
         } catch (Exception e) {
-            showError("Ошибка: " + e.getMessage());
+            showError("Error: " + e.getMessage());
         }
 
         pressAnyKeyToContinue();
@@ -544,19 +544,19 @@ public class InteractiveMenu {
 
     private void createSafetyInvestment() {
         System.out.println();
-        System.out.print("🛡️  Введите сумму для безопасного инвестирования: $");
+        System.out.print("Enter amount for secure investment: $");
         BigDecimal investment = readBigDecimalInput();
 
         if (investment.compareTo(BigDecimal.ZERO) <= 0) {
-            showError("Сумма должна быть положительной.");
+            showError("Amount must be positive.");
             return;
         }
 
         try {
             bankingFacade.investWithSafetyMode(currentCustomerId, investment);
-            showSuccess("Безопасный инвестиционный счет создан!");
+            showSuccess("Secure investment account created!");
         } catch (Exception e) {
-            showError("Ошибка: " + e.getMessage());
+            showError("Error: " + e.getMessage());
         }
 
         pressAnyKeyToContinue();
@@ -564,20 +564,20 @@ public class InteractiveMenu {
 
     private void checkOverdraft() {
         System.out.println();
-        System.out.println("💳 Проверка овердрафта");
+        System.out.println("Overdraft check");
 
         List<Account> accounts = bankingFacade.getCustomerAccountsByType(currentCustomerId, "Checking");
         if (accounts.isEmpty()) {
-            showError("У вас нет расчетных счетов.");
+            showError("You don't have checking accounts.");
             return;
         }
 
         for (Account account : accounts) {
             if (account instanceof OverdraftProtectionDecorator) {
                 OverdraftProtectionDecorator overdraftAccount = (OverdraftProtectionDecorator) account;
-                System.out.println("📋 Счет: " + account.getAccountNumber());
-                System.out.println("💳 Лимит овердрафта: $" + overdraftAccount.getAvailableOverdraft());
-                System.out.println("💰 Использовано: $" + overdraftAccount.getUsedOverdraft());
+                System.out.println("Account: " + account.getAccountNumber());
+                System.out.println("Overdraft limit: $" + overdraftAccount.getAvailableOverdraft());
+                System.out.println("Used: $" + overdraftAccount.getUsedOverdraft());
             }
         }
 
@@ -586,7 +586,7 @@ public class InteractiveMenu {
 
     private void currencyOperations() {
         System.out.println();
-        System.out.println("💱 Мультивалютные операции");
+        System.out.println("Multi-currency operations");
 
         List<Account> accounts = bankingFacade.getCustomerAccountsByType(currentCustomerId, "Checking");
         boolean hasCurrencyAccount = false;
@@ -595,14 +595,14 @@ public class InteractiveMenu {
             if (account instanceof ForeignCurrencyDecorator) {
                 hasCurrencyAccount = true;
                 ForeignCurrencyDecorator currencyAccount = (ForeignCurrencyDecorator) account;
-                System.out.println("📋 Счет: " + account.getAccountNumber());
-                System.out.println("🌍 Поддерживаемые валюты: " +
+                System.out.println("Account: " + account.getAccountNumber());
+                System.out.println("Supported currencies: " +
                         String.join(", ", currencyAccount.getSupportedCurrencies().keySet()));
             }
         }
 
         if (!hasCurrencyAccount) {
-            showInfo("Мультивалютность доступна для расчетных счетов с балансом от $5,000");
+            showInfo("Multi-currency available for checking accounts with balance from $5,000");
         }
 
         pressAnyKeyToContinue();
@@ -610,7 +610,7 @@ public class InteractiveMenu {
 
     private void priorityBanking() {
         System.out.println();
-        System.out.println("⭐ Привилегированное обслуживание");
+        System.out.println("Priority banking");
 
         List<Account> accounts = bankingFacade.getCustomerAccountsByType(currentCustomerId, "Investment");
         boolean hasPriorityAccount = false;
@@ -619,15 +619,15 @@ public class InteractiveMenu {
             if (account instanceof PriorityBankingDecorator) {
                 hasPriorityAccount = true;
                 PriorityBankingDecorator priorityAccount = (PriorityBankingDecorator) account;
-                System.out.println("📋 Счет: " + account.getAccountNumber());
-                System.out.println("✨ Бесплатные транзакции: " + priorityAccount.getRemainingFreeTransactions());
-                System.out.println("💎 Преференциальная ставка: " +
+                System.out.println("Account: " + account.getAccountNumber());
+                System.out.println("Free transactions: " + priorityAccount.getRemainingFreeTransactions());
+                System.out.println("Preferential rate: " +
                         priorityAccount.getPreferentialInterestRate().multiply(BigDecimal.valueOf(100)) + "%");
             }
         }
 
         if (!hasPriorityAccount) {
-            showInfo("Привилегии доступны для инвестиционных счетов с балансом от $5,000");
+            showInfo("Privileges available for investment accounts with balance from $5,000");
         }
 
         pressAnyKeyToContinue();
@@ -635,7 +635,7 @@ public class InteractiveMenu {
 
     private void rewardPoints() {
         System.out.println();
-        System.out.println("🎁 Бонусные баллы");
+        System.out.println("Reward points");
 
         List<Account> accounts = bankingFacade.getCustomerAccountsByType(currentCustomerId, "Savings");
         boolean hasRewardsAccount = false;
@@ -644,14 +644,14 @@ public class InteractiveMenu {
             if (account instanceof RewardPointsDecorator) {
                 hasRewardsAccount = true;
                 RewardPointsDecorator rewardsAccount = (RewardPointsDecorator) account;
-                System.out.println("📋 Счет: " + account.getAccountNumber());
-                System.out.println("⭐ Накоплено баллов: " + rewardsAccount.getRewardPoints());
-                System.out.println("🎯 Ставка: " + rewardsAccount.getPointsPerDollar() + " балла за $1");
+                System.out.println("Account: " + account.getAccountNumber());
+                System.out.println("Points earned: " + rewardsAccount.getRewardPoints());
+                System.out.println("Rate: " + rewardsAccount.getPointsPerDollar() + " points per $1");
             }
         }
 
         if (!hasRewardsAccount) {
-            showInfo("Бонусные баллы начисляются на сберегательные счета: 2 балла за каждый доллар");
+            showInfo("Reward points are earned on savings accounts: 2 points per dollar");
         }
 
         pressAnyKeyToContinue();
@@ -665,16 +665,16 @@ public class InteractiveMenu {
 
     private void viewStatement() {
         System.out.println();
-        System.out.print("📊 Введите номер счета для выписки: ");
+        System.out.print("Enter account number for statement: ");
         String accountNumber = scanner.nextLine().trim();
 
         if (accountNumber.isEmpty()) {
-            showError("Номер счета не может быть пустым.");
+            showError("Account number cannot be empty.");
             return;
         }
 
         if (!isAccountAccessible(accountNumber)) {
-            showError("Счет не найден или у вас нет к нему доступа.");
+            showError("Account not found or you don't have access.");
             return;
         }
 
@@ -686,7 +686,7 @@ public class InteractiveMenu {
             );
             System.out.println(statement);
         } catch (Exception e) {
-            showError("Ошибка при получении выписки: " + e.getMessage());
+            showError("Error getting statement: " + e.getMessage());
         }
 
         pressAnyKeyToContinue();
@@ -697,20 +697,20 @@ public class InteractiveMenu {
         List<Notification> notifications = bankingFacade.getCustomerNotifications(currentCustomerId);
 
         if (notifications.isEmpty()) {
-            showInfo("📭 У вас нет уведомлений.");
+            showInfo("You have no notifications.");
         } else {
-            System.out.println("┌─────────────────── УВЕДОМЛЕНИЯ ───────────────────┐");
+            System.out.println("------------------- NOTIFICATIONS -------------------");
             for (int i = 0; i < notifications.size(); i++) {
                 Notification notif = notifications.get(i);
-                String status = notif.isRead() ? "📭" : "📬";
+                String status = notif.isRead() ? "READ" : "NEW";
                 String index = String.format("%2d", i + 1);
-                System.out.printf("│ %s %s %-45s │\n", status, index, notif.getTitle());
-                System.out.printf("│    %-50s │\n", notif.getMessage());
+                System.out.printf("| %s %s %-45s |\n", status, index, notif.getTitle());
+                System.out.printf("|    %-50s |\n", notif.getMessage());
                 if (i < notifications.size() - 1) {
-                    System.out.println("├────────────────────────────────────────────────────┤");
+                    System.out.println("----------------------------------------------------");
                 }
             }
-            System.out.println("└────────────────────────────────────────────────────┘");
+            System.out.println("----------------------------------------------------");
         }
 
         pressAnyKeyToContinue();
@@ -722,7 +722,7 @@ public class InteractiveMenu {
             String portfolio = bankingFacade.generateCustomerPortfolio(currentCustomerId);
             System.out.println(portfolio);
         } catch (Exception e) {
-            showError("Ошибка при генерации отчета: " + e.getMessage());
+            showError("Error generating report: " + e.getMessage());
         }
 
         pressAnyKeyToContinue();
@@ -730,48 +730,48 @@ public class InteractiveMenu {
 
     private void closeAccount() {
         System.out.println();
-        System.out.print("🗑️  Введите номер счета для закрытия: ");
+        System.out.print("Enter account number to close: ");
         String accountNumber = scanner.nextLine().trim();
 
         if (accountNumber.isEmpty()) {
-            showError("Номер счета не может быть пустым.");
+            showError("Account number cannot be empty.");
             return;
         }
 
         if (!isAccountAccessible(accountNumber)) {
-            showError("Счет не найден или у вас нет к нему доступа.");
+            showError("Account not found or you don't have access.");
             return;
         }
 
-        // Проверяем баланс счета
+        // Check account balance
         try {
             Account account = getAccountByNumber(accountNumber);
             if (account != null && account.getBalance().compareTo(BigDecimal.ZERO) > 0) {
-                showWarning("На счете остаются средства: $" + account.getBalance());
-                System.out.print("Вы уверены, что хотите закрыть счет? (y/n): ");
+                showWarning("Account still has funds: $" + account.getBalance());
+                System.out.print("Are you sure you want to close the account? (y/n): ");
                 String confirm = scanner.nextLine().trim();
-                if (!"y".equalsIgnoreCase(confirm) && !"д".equalsIgnoreCase(confirm)) {
-                    showInfo("Закрытие счета отменено.");
+                if (!"y".equalsIgnoreCase(confirm)) {
+                    showInfo("Account closure cancelled.");
                     return;
                 }
             }
         } catch (Exception e) {
-            showError("Ошибка при проверке счета: " + e.getMessage());
+            showError("Account check error: " + e.getMessage());
             return;
         }
 
-        System.out.print("❓ Вы уверены, что хотите закрыть счет " + accountNumber + "? (y/n): ");
+        System.out.print("Are you sure you want to close account " + accountNumber + "? (y/n): ");
         String confirmation = scanner.nextLine().trim();
 
-        if ("y".equalsIgnoreCase(confirmation) || "д".equalsIgnoreCase(confirmation)) {
+        if ("y".equalsIgnoreCase(confirmation)) {
             try {
                 bankingFacade.closeAccount(currentCustomerId, accountNumber);
-                showSuccess("Счет успешно закрыт.");
+                showSuccess("Account successfully closed.");
             } catch (Exception e) {
-                showError("Ошибка при закрытии счета: " + e.getMessage());
+                showError("Error closing account: " + e.getMessage());
             }
         } else {
-            showInfo("Закрытие счета отменено.");
+            showInfo("Account closure cancelled.");
         }
 
         pressAnyKeyToContinue();
@@ -779,7 +779,7 @@ public class InteractiveMenu {
 
     private void runDemo() {
         System.out.println();
-        System.out.println("🚀 Запуск демонстрации системы...");
+        System.out.println("Starting system demonstration...");
         banking.Application demoApp = new banking.Application();
         demoApp.runQuickDemo();
         pressAnyKeyToContinue();
@@ -787,39 +787,39 @@ public class InteractiveMenu {
 
     private void showSystemInfo() {
         System.out.println();
-        System.out.println("┌─────────────────── О СИСТЕМЕ ───────────────────┐");
-        System.out.println("│ 🏦 Digital Banking & Investment System         │");
-        System.out.println("│                                                │");
-        System.out.println("│ 📊 Реализованные паттерны:                     │");
-        System.out.println("│   • Decorator - для добавления функциональности│");
-        System.out.println("│   • Facade - для упрощения интерфейса          │");
-        System.out.println("│                                                │");
-        System.out.println("│ 💎 Особенности системы:                        │");
-        System.out.println("│   • 3 типа счетов с различными бенефитами      │");
-        System.out.println("│   • 6 декораторов для расширения функций       │");
-        System.out.println("│   • Полный цикл банковских операций            │");
-        System.out.println("│   • Система уведомлений и отчетности           │");
-        System.out.println("└────────────────────────────────────────────────────┘");
+        System.out.println("------------------- ABOUT THE SYSTEM ---------------");
+        System.out.println("| Digital Banking & Investment System              |");
+        System.out.println("|                                                  |");
+        System.out.println("| Implemented patterns:                            |");
+        System.out.println("|   * Decorator - for adding functionality         |");
+        System.out.println("|   * Facade - for simplifying interface           |");
+        System.out.println("|                                                  |");
+        System.out.println("| System features:                                 |");
+        System.out.println("|   * 3 account types with various benefits        |");
+        System.out.println("|   * 6 decorators for extending functions         |");
+        System.out.println("|   * Full cycle of banking operations             |");
+        System.out.println("|   * Notification and reporting system            |");
+        System.out.println("----------------------------------------------------");
         pressAnyKeyToContinue();
     }
 
     private void logout() {
         System.out.println();
-        showSuccess("👋 До свидания, " + currentCustomerId + "!");
+        showSuccess("Goodbye, " + currentCustomerId + "!");
         currentCustomerId = null;
         pressAnyKeyToContinue();
     }
 
     private void exitSystem() {
         System.out.println();
-        System.out.println("╔════════════════════════════════════════════════════╗");
-        System.out.println("║         Спасибо за использование системы!         ║");
-        System.out.println("║                 До новых встреч! 👋               ║");
-        System.out.println("╚════════════════════════════════════════════════════╝");
+        System.out.println("========================================================");
+        System.out.println("|         Thank you for using the system!             |");
+        System.out.println("|                 See you again!                      |");
+        System.out.println("========================================================");
         System.exit(0);
     }
 
-    // Вспомогательные методы
+    // Helper methods
     private boolean isAccountAccessible(String accountNumber) {
         try {
             List<Account> customerAccounts = bankingFacade.getCustomerAccountsByType(currentCustomerId, "");
@@ -852,7 +852,7 @@ public class InteractiveMenu {
             try {
                 return Integer.parseInt(scanner.nextLine().trim());
             } catch (NumberFormatException e) {
-                System.out.print("❌ Пожалуйста, введите число: ");
+                System.out.print("Please enter a number: ");
             }
         }
     }
@@ -862,30 +862,30 @@ public class InteractiveMenu {
             try {
                 return new BigDecimal(scanner.nextLine().trim());
             } catch (NumberFormatException e) {
-                System.out.print("❌ Пожалуйста, введите корректную сумму: ");
+                System.out.print("Please enter a valid amount: ");
             }
         }
     }
 
     private void pressAnyKeyToContinue() {
-        System.out.print("↵ Нажмите Enter для продолжения...");
+        System.out.print("Press Enter to continue...");
         scanner.nextLine();
     }
 
     private void showSuccess(String message) {
-        System.out.println("✅ " + message);
+        System.out.println("[SUCCESS] " + message);
     }
 
     private void showError(String message) {
-        System.out.println("❌ " + message);
+        System.out.println("[ERROR] " + message);
     }
 
     private void showWarning(String message) {
-        System.out.println("⚠️  " + message);
+        System.out.println("[WARNING] " + message);
     }
 
     private void showInfo(String message) {
-        System.out.println("ℹ️  " + message);
+        System.out.println("[INFO] " + message);
     }
 
     private String padRight(String s, int n) {

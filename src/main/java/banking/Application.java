@@ -294,16 +294,13 @@ public class Application {
         }
     }
 
-    /**
-     * Вспомогательный метод для поиска счета по типу
-     */
+
     private String findFirstAccountOfType(String customerId, String typeKeyword) {
         try {
-            // Используем новый метод из BankingFacade
+
             return bankingFacade.findAccountNumberByType(customerId, typeKeyword);
         } catch (Exception e) {
             System.out.println("⚠️  Account search issue: " + e.getMessage());
-            // Fallback: используем первый доступный счет
             try {
                 return bankingFacade.findFirstAccountForCustomer(customerId);
             } catch (Exception ex) {
